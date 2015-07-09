@@ -10,9 +10,11 @@ body {
 .red,
 .green,
 .grey {
-	width: 6.26%;
+	width: 8.33333333333333%;
 	height: 20px;
 	display: inline-block;
+	margin:0 auto;
+    float:left;
 }
 
 .yellow {
@@ -21,18 +23,14 @@ body {
 
 .red {
 	background-color: #ae5a41;
-	margin-left: -4px;
 }
 
 .green {
 	background-color: #559e83;
-	margin-left: -4px;
 }
 
 .grey {
 	background-color: #5a5255;
-	margin-left: -4px;
-	margin-right: -4px;
 }
 
 .camera-container {

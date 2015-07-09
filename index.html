@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mugger">
 <head>
 	<title>IS</title>
 	<link rel="icon" type="image/png" href="img/camera.png">
 	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="yellow">
-	</div>
-	<div class="red">
-	</div>
-	<div class="green">
-	</div>
-	<div class="grey">
-	</div>
 	<div class="yellow">
 	</div>
 	<div class="red">
@@ -47,9 +40,14 @@
 		</div>
 	</div>
 	<div class="input-container">
-		<form>
-			<input type="text" placeholder="SEARCH INSTAGRAM"></input>
+		<form ng-submit="getImages()">
+			<input type="text" placeholder="SEARCH INSTAGRAM" ng-minlength="1" ng-maxlength="25" ng-model="data.tag"></input>
 		</form>
+	</div>
+	<div class="images-container" ng-controller="imageController">
+		<div class="image" ng-repeat="image in data.images">
+			<img ng-src="{{data.image}}">
+		</div>
 	</div>
 </body>
 </html>
