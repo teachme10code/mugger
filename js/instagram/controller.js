@@ -8,7 +8,6 @@ app.controller('InstagramController', ['$scope', 'Instagram',
 			});
 		}
 
-
 		var instagramSuccess = function(data) {
 			if (data.length > 0) {
 				$scope.images = data;
@@ -19,10 +18,12 @@ app.controller('InstagramController', ['$scope', 'Instagram',
 		};
 
 		$scope.getImages = function() {
-			Instagram.get(25, $scope.data.tag).success(function(response) {
-				console.log(response.data);
-				return instagramSuccess(response.data);
-			});
+			if ($scope.data.tag) {
+				Instagram.get(25, $scope.data.tag).success(function(response) {
+					console.log(response.data);
+					return instagramSuccess(response.data);
+				});
+			}
 		}
 	}
 ]);

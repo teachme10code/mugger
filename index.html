@@ -7,6 +7,7 @@
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-animate.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/instagram/controller.js"></script>
 	<script type="text/javascript" src="js/instagram/factory.js"></script>
@@ -47,7 +48,7 @@
 		</div>
 		<div class="input-container">
 			<form ng-submit="getImages()">
-				<input type="text" placeholder="SEARCH INSTAGRAM #" ng-minlength="1" ng-maxlength="25" ng-model="data.tag"></input>
+				<input type="text" placeholder="SEARCH INSTAGRAM #" ng-minlength="1" ng-maxlength="25" ng-model="data.tag" required></input>
 			</form>
 		</div>
 	</div>

@@ -130,3 +130,12 @@ input {
 .image:active {
 	opacity: 0.5;
 }
+
+.image.ng-enter {
+	transition: .75s ease-in all;
+	opacity: 0;
+}
+
+.image.ng-enter-active {
+	opacity: 1;
+}
