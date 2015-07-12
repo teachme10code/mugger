@@ -1,19 +1,38 @@
 * {
 	font-family: 'Montserrat', sans-serif;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
 	background-color: #1b85b8;
+	position: absolute;
+	width: 100%;
+}
+
+.color-strip-container {
+	position: fixed;
+	width: 100%;
+	height: 10px;
+	margin:0 auto;
+	float: left;
+	z-index: 100;
 }
 
 .yellow,
 .red,
 .green,
 .grey {
+	position: relative;
 	width: 8.33333333333333%;
-	height: 20px;
+	height: 10px;
 	display: inline-block;
 	margin:0 auto;
+	margin-top: 0px;
     float:left;
 }
 
@@ -34,41 +53,74 @@ body {
 }
 
 .camera-container {
-	height: 200px;
-	width: 178px;
-	margin-left: auto;
-	margin-right: auto;
+	position: absolute;
+	height: 52px;
+	width: 52px;
 	margin-bottom: 25px;
-	position: fixed;
- 	top: 24%;
-  	left: 50%;
+	margin-top: 100px;
+  	margin-left: 60%;
   	transform: translate(-50%, -50%);
+  	user-select: none;
+}
+
+.glyphicon-camera:hover {
+	cursor: pointer;
+}
+
+.glyphicon-camera:active {
+	color: #70686B;
+	font-size: 46px;
+	margin-top: 4px;
+	margin-left: 3px;
 }
 
 .glyphicon-camera {
-	color: #FFFFFF;
-	font-size: 178px;
+	color: #5a5255;
+	font-size: 52px;
 }
 
 .input-container {
+	position: absolute;
 	width: 305px;
-	height: 40px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	position: fixed;
- 	top: 40%;
-  	left: 50%;
+	height: 35px;
+	margin-bottom: 20px;
+	margin-top: 104px;
+  	margin-left: 50%;
   	transform: translate(-50%, -50%);
 }
 
 input {
 	width: 305px;
-	height: 40px;
+	height: 35px;
 	border-radius: 4px;
 	font-size: 16px;
 	border-style: none;
 	border: 2px solid #5a5255;
 	text-align: center;
 	color: #5a5255;
+}
+
+.images-container {
+	position: absolute;
+	margin-top: 998px;
+  	margin-left: 50%;
+  	width: 1604px;
+  	height: 1604px;
+  	transform: translate(-50%, -50%);
+  	border: 2px solid #5a5255;
+  	border-radius: 4px;
+}
+
+.image {
+	display: inline-block;
+	width: 320px;
+	height: 320px;
+}
+
+.image:hover {
+	cursor: pointer;
+}
+
+.image:active {
+	opacity: 0.5;
 }

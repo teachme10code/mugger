@@ -1,39 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="mugger">
+<html lang="en" ng-app="app">
 <head>
-	<title>IS</title>
+	<title>mugger</title>
 	<link rel="icon" type="image/png" href="img/camera.png">
 	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/instagram/controller.js"></script>
+	<script type="text/javascript" src="js/instagram/factory.js"></script>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-	<div class="yellow">
-	</div>
-	<div class="red">
-	</div>
-	<div class="green">
-	</div>
-	<div class="grey">
-	</div>
-	<div class="yellow">
-	</div>
-	<div class="red">
-	</div>
-	<div class="green">
-	</div>
-	<div class="grey">
-	</div>
-	<div class="yellow">
-	</div>
-	<div class="red">
-	</div>
-	<div class="green">
-	</div>
-	<div class="grey">
+<body ng-controller="InstagramController">
+	<div class="color-strip-container">
+		<div class="yellow">
+		</div>
+		<div class="red">
+		</div>
+		<div class="green">
+		</div>
+		<div class="grey">
+		</div>
+		<div class="yellow">
+		</div>
+		<div class="red">
+		</div>
+		<div class="green">
+		</div>
+		<div class="grey">
+		</div>
+		<div class="yellow">
+		</div>
+		<div class="red">
+		</div>
+		<div class="green">
+		</div>
+		<div class="grey">
+		</div>
 	</div>
 	<div class="camera-container">
 		<div class="glyphicon glyphicon-camera">
@@ -44,9 +49,9 @@
 			<input type="text" placeholder="SEARCH INSTAGRAM" ng-minlength="1" ng-maxlength="25" ng-model="data.tag"></input>
 		</form>
 	</div>
-	<div class="images-container" ng-controller="imageController">
-		<div class="image" ng-repeat="image in data.images">
-			<img ng-src="{{data.image}}">
+	<div class="images-container">
+		<div class="image" ng-repeat="image in images track by $index">
+			<a ng-href="{{images[$index].link}}" target="_blank"><img ng-src="{{images[$index].images.low_resolution.url}}"></a>
 		</div>
 	</div>
 </body>
