@@ -2,6 +2,12 @@
 
 app.controller('InstagramController', ['$scope', 'Instagram',
 	function($scope, Instagram) {
+		$scope.getDefaultImages = function() {
+			Instagram.get(25, "travel").success(function(response) {
+				return instagramSuccess(response.data);
+			});
+		}
+
 
 		var instagramSuccess = function(data) {
 			if (data.length > 0) {

@@ -52,15 +52,20 @@ body {
 	background-color: #5a5255;
 }
 
-.camera-container {
+.input-and-camera-container {
 	position: absolute;
 	height: 52px;
-	width: 52px;
-	margin-bottom: 25px;
-	margin-top: 100px;
-  	margin-left: 60%;
+	width: 375px;
+	margin-top: 85px;
+	margin-left: 52.5%;
   	transform: translate(-50%, -50%);
-  	user-select: none;
+}
+
+.camera-container {
+	height: 52px;
+	width: 52px;
+	float: right;
+	margin-right: 5px;
 }
 
 .glyphicon-camera:hover {
@@ -80,13 +85,9 @@ body {
 }
 
 .input-container {
-	position: absolute;
 	width: 305px;
 	height: 35px;
-	margin-bottom: 20px;
-	margin-top: 104px;
-  	margin-left: 50%;
-  	transform: translate(-50%, -50%);
+	margin-top: 13px;
 }
 
 input {
@@ -102,19 +103,24 @@ input {
 
 .images-container {
 	position: absolute;
-	margin-top: 998px;
+	margin-top: 875px;
   	margin-left: 50%;
-  	width: 1604px;
-  	height: 1604px;
+	padding: 1px;
+  	width: 1421px;
+  	height: 1421px;
   	transform: translate(-50%, -50%);
   	border: 2px solid #5a5255;
   	border-radius: 4px;
+  	background-color: #FFFFFF;
 }
 
 .image {
 	display: inline-block;
-	width: 320px;
-	height: 320px;
+	width: 279px;
+	height: 279px;
+	margin: 2px;
+	border-radius: 4px;
+	border: 2px solid #5a5255;
 }
 
 .image:hover {
