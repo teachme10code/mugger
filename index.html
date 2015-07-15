@@ -53,8 +53,8 @@
 		</div>
 	</div>
 	<div class="images-container">
-		<div class="image" ng-repeat="image in images track by $index">
-			<a ng-href="{{images[$index].link}}" target="_blank"><img width="275px" height="275px" ng-src="{{images[$index].images.low_resolution.url}}"></a>
+		<div class="image" ng-repeat="image in images">
+			<a ng-href="{{image.link}}" target="_blank"><img width="275px" height="275px" ng-src="{{image.images.low_resolution.url}}"></a>
 		</div>
 	</div>
 </body>
